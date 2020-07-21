@@ -1,0 +1,25 @@
+{
+  "name": "qm-hub-mux-redirect-mapping",
+  "version": "1.0.1",
+  "description": "Component multiplexer  | mapping redirect | Node-RED",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modulesQuimera/qm-hub-mux-redirect-mapping.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modulesQuimera/qm-hub-mux-redirect-mapping/issues"
+  },
+  "homepage": "https://github.com/modulesQuimera/qm-hub-mux-redirect-mapping#readme",
+  "node-red": {
+		"nodes": {
+			"mapping-redirect": "mapping-redirect.js"
+		}
+	}
+}

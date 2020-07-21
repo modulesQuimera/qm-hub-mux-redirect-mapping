@@ -1,0 +1,138 @@
+<style>
+    /* COPIAR ESSE PEDAÇO DO NAME UNIVERSAL  */
+    .columm{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+
+    .hr-full{
+        width: 100% !important;
+    }
+    /* ATE AQUI  */
+
+</style>
+
+<script type="text/html" data-template-name="mapping-redirect">
+    <div class="form-row columm">
+        <label  for="node-config-input-name"><i class="fa fa-tag"></i> Mapping Name</label>
+        <input type="text" id="node-config-input-name" style="width:80%;">
+    </div>
+    <div class="form-row columm">
+        <label  for="node-config-input-slot"><i class="fa fa-sliders"></i> Slot</label>
+        <input min="0" type="number" id="node-config-input-slot" style="width:20%;">
+    </div>
+    <hr class="hr-full">
+    <h2>SLOT 1 Mux modular mapping - redirect</h2>
+    <div class="form-row">
+        <label> A01/B01 - </label><input maxlength="8" type="text" id="node-config-input-labelPort1" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A02/B02 - </label><input maxlength="8" type="text" id="node-config-input-labelPort2" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A03/B03 - </label><input maxlength="8" type="text" id="node-config-input-labelPort3" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A04/B04 - </label><input maxlength="8" type="text" id="node-config-input-labelPort4" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A05/B05 - </label><input maxlength="8" type="text" id="node-config-input-labelPort5" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A06/B06 - </label><input maxlength="8" type="text" id="node-config-input-labelPort6" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A07/B07 - </label><input maxlength="8" type="text" id="node-config-input-labelPort7" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A08/B08 - </label><input maxlength="8" type="text" id="node-config-input-labelPort8" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A09/B09 - </label><input maxlength="8" type="text" id="node-config-input-labelPort9" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A10/B10 - </label><input maxlength="8" type="text" id="node-config-input-labelPort10" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A11/B11 - </label><input maxlength="8" type="text" id="node-config-input-labelPort11" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A12/B12 - </label><input maxlength="8" type="text" id="node-config-input-labelPort12" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A13/B13 - </label><input maxlength="8" type="text" id="node-config-input-labelPort13" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A14/B14 - </label><input maxlength="8" type="text" id="node-config-input-labelPort14" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A15/B15 - </label><input maxlength="8" type="text" id="node-config-input-labelPort15" style="width:30%; margin-left: -145px">
+    </div>
+    <div class="form-row">
+        <label> A16/B16 - </label><input maxlength="8" type="text" id="node-config-input-labelPort16" style="width:30%; margin-left: -145px">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="mapping-redirect">
+    <p>working on it...</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('mapping-redirect',{
+        category: 'config',
+        defaults: {
+            name:{value:""},
+            slot: {value:"", required:true},
+
+            labelPort1: {value:""},
+            valuePort1: {value:"0"},
+
+            labelPort2: {value:""},
+            valuePort2: {value:"1"},
+
+            labelPort3: {value:""},
+            valuePort3: {value:"2"},
+            
+            labelPort4: {value:""},
+            valuePort4: {value:"3"},
+
+            labelPort5: {value:""},
+            valuePort5: {value:"4"},
+
+            labelPort6: {value:""},
+            valuePort6: {value:"5"},
+
+            labelPort7: {value:""},
+            valuePort7: {value:"6"},
+
+            labelPort8: {value:""},
+            valuePort8: {value:"7"},
+
+            labelPort9: {value:""},
+            valuePort9: {value:"8"},
+
+            labelPort10: {value:""},
+            valuePort10: {value:"9"},
+
+            labelPort11: {value:""},
+            valuePort11: {value:"10"},
+
+            labelPort12: {value:""},
+            valuePort12: {value:"11"},
+
+            labelPort13: {value:""},
+            valuePort13: {value:"12"},
+
+            labelPort14: {value:""},
+            valuePort14: {value:"13"},
+
+            labelPort15: {value:""},
+            valuePort15: {value:"14"},
+
+            labelPort16: {value:""},
+            valuePort16: {value:"15"},
+        },
+        label: function() { return this.name || "" },
+    });
+</script>
