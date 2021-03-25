@@ -1,0 +1,297 @@
+<script type="text/javascript">
+    RED.nodes.registerType('mux-mapping',{
+        category: 'config',
+        defaults: {
+            name:{value:""},
+            slot: {value:"", required:true},
+
+            A01: {value:""},
+            valueA01: {value:"0"},
+            A02: {value:""},
+            valueA02: {value:"1"},
+            A03: {value:""},
+            valueA03: {value:"2"},
+            A04: {value:""},
+            valueA04: {value:"3"},
+            AGND31: {value: ""},
+            valueAGND31: {value: ""},
+
+            A05: {value:""},
+            valueA05: {value:"4"},
+            A06: {value:""},
+            valueA06: {value:"5"},
+            A07: {value:""},
+            valueA07: {value:"6"},
+            A08: {value:""},
+            valueA08: {value:"7"},
+            AGND21: {value: ""},
+            valueAGND21: {value: ""},
+
+            A09: {value:""},
+            valueA09: {value:"8"},
+            A10: {value:""},
+            valueA10: {value:"9"},
+            A11: {value:""},
+            valueA11: {value:"10"},
+            A12: {value:""},
+            valueA12: {value:"11"},
+            AGND11: {value: ""},
+            valueAGND11: {value: ""},
+
+            A13: {value:""},
+            valueA13: {value:"12"},
+            A14: {value:""},
+            valueA14: {value:"13"},
+            A15: {value:""},
+            valueA15: {value:"14"},
+            A16: {value:""},
+            valueA16: {value:"15"},
+            AGND1: {value: ""},
+            valueAGND1: {value: ""},
+
+            B01: {value:""},
+            B02: {value:""},
+            B03: {value:""},
+            B04: {value:""},
+            AGND32: {value:""},
+            B05: {value:""},
+            B06: {value:""},
+            B07: {value:""},
+            B08: {value:""},
+            AGND22: {value:""},
+            B09: {value:""},
+            B10: {value:""},
+            B11: {value:""},
+            B12: {value:""},
+            AGND12: {value:""},
+            B13: {value:""},
+            B14: {value:""},
+            B15: {value:""},
+            B16: {value:""},
+            AGND2: {value:""},
+
+
+        },
+        label: function() { return this.name || "" },
+        oneditresize: function() {
+            $("#red-ui-editor-config-scope").val($("#red-ui-editor-config-scope option:first").val());
+        },
+        oneditprepare: function() { 
+            $("#SLOT").text(`INSTANCE ${this.slot != undefined ? this.slot : "" } MUX modular mapping - redirect`);
+        }
+    });
+</script>
+
+<style>
+    /* COPIAR ESSE PEDAÇO DO NAME UNIVERSAL  */
+    .columm{ display: flex !important; flex-direction: column !important; }
+    .label-map-red{ width: max-content !important; margin-right: 10px !important; margin-left: 5px !important; }
+    .hr-full{ width: 100% !important; }
+    .divA { width: 49% !important; float: left !important; }
+    .divB { width: 49% !important; float: left !important; }
+    .label-A{ width: 38% !important; margin-right: 15px !important; }
+    .label-B{ width: 38% !important; margin-right: 15px !important; }
+    .input-A{ width: 53% !important; }
+    .input-B{ width: 53% !important; }
+    /* ATE AQUI  */
+</style>
+
+<script type="text/html" data-template-name="mux-mapping">
+    <div class="form-row columm">
+        <label  for="node-config-input-name"><i class="fa fa-tag"></i> Mapping Name</label>
+        <input type="text" id="node-config-input-name" style="width:80%;">
+    </div>
+    <div class="form-row columm">
+        <label  for="node-config-input-slot"><i class="fa fa-sliders"></i> Instance</label>
+        <input min="1" max="9" type="number" id="node-config-input-slot" style="width:20%;">
+    </div>
+    <hr class="hr-full">
+    <h2 id="SLOT"></h2>
+    <h3>Conector XG4A-4034</h3>
+    <div class="MAP1">
+        <div class="divA">
+            <div class="form-row">
+                <div style="float: left; text-align: center; margin-bottom: 28px; width: max-content;">
+                    <span> Jig interface </span>
+                </div>
+                <div style="text-align: center;">
+                    <span> Board Interface <br> (TP or Connector) </span>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A01 - PIN 39</label>
+                <input class="input-A" type="text" id="node-config-input-A01">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A02 - PIN 37</label>
+                <input class="input-A" type="text" id="node-config-input-A02">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A03 - PIN 35</label>
+                <input class="input-A" type="text" id="node-config-input-A03">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A04 - PIN 33</label>
+                <input class="input-A" type="text" id="node-config-input-A04">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> AGND - PIN 31</label>
+                <input class="input-A" type="text" id="node-config-input-AGND31">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A05 - PIN 29</label>
+                <input class="input-A" type="text" id="node-config-input-A05">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A06 - PIN 27</label>
+                <input class="input-A" type="text" id="node-config-input-A06">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A07 - PIN 25</label>
+                <input class="input-A" type="text" id="node-config-input-A07">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A08 - PIN 23</label>
+                <input class="input-A" type="text" id="node-config-input-A08">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> AGND - PIN 21</label>
+                <input class="input-A" type="text" id="node-config-input-AGND21">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A09 - PIN 19</label>
+                <input class="input-A" type="text" id="node-config-input-A09">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A10 - PIN 17</label>
+                <input class="input-A" type="text" id="node-config-input-A10">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A11 - PIN 15</label>
+                <input class="input-A" type="text" id="node-config-input-A11">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A12 - PIN 13</label>
+                <input class="input-A" type="text" id="node-config-input-A12">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> AGND - PIN 11</label>
+                <input class="input-A" type="text" id="node-config-input-AGND11">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A13 - PIN 9</label>
+                <input class="input-A" type="text" id="node-config-input-A13">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A14 - PIN 7</label>
+                <input class="input-A" type="text" id="node-config-input-A14">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A15 - PIN 5</label>
+                <input class="input-A" type="text" id="node-config-input-A15">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> A16 - PIN 3</label>
+                <input class="input-A" type="text" id="node-config-input-A16">
+            </div>
+            <div class="form-row">
+                <label class="label-A"><i class="fa fa-microchip"></i> AGND - PIN 1</label>
+                <input class="input-A" type="text" id="node-config-input-AGND1">
+            </div>
+        </div>
+        <div class="divB">
+            <div class="form-row">
+                <div style="float: left; text-align: center; margin-bottom: 28px; width: max-content;">
+                    <span> Jig interface </span>
+                </div>
+                <div style="text-align: center;">
+                    <span> Board Interface <br> (TP or Connector) </span>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B01 - PIN 40</label>
+                <input class="input-B" type="text" id="node-config-input-B01">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B02 - PIN 38</label>
+                <input class="input-B" type="text" id="node-config-input-B02">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B03 - PIN 36</label>
+                <input class="input-B" type="text" id="node-config-input-B03">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B04 - PIN 34</label>
+                <input class="input-B" type="text" id="node-config-input-B04">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> AGND - PIN 32</label>
+                <input class="input-B" type="text" id="node-config-input-AGND32">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B05 - PIN 30</label>
+                <input class="input-B" type="text" id="node-config-input-B05">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B06 - PIN 28</label>
+                <input class="input-B" type="text" id="node-config-input-B06">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B07 - PIN 26</label>
+                <input class="input-B" type="text" id="node-config-input-B07">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B08 - PIN 24</label>
+                <input class="input-B" type="text" id="node-config-input-B08">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> AGND - PIN 22</label>
+                <input class="input-B" type="text" id="node-config-input-AGND22">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B09 - PIN 20</label>
+                <input class="input-B" type="text" id="node-config-input-B09">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B10 - PIN 18</label>
+                <input class="input-B" type="text" id="node-config-input-B10">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B11 - PIN 16</label>
+                <input class="input-B" type="text" id="node-config-input-B11">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B12 - PIN 14</label>
+                <input class="input-B" type="text" id="node-config-input-B12">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> AGND - PIN 12</label>
+                <input class="input-B" type="text" id="node-config-input-AGND12">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B13 - PIN 10</label>
+                <input class="input-B" type="text" id="node-config-input-B13">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B14 - PIN 8</label>
+                <input class="input-B" type="text" id="node-config-input-B14">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B15 - PIN 6</label>
+                <input class="input-B" type="text" id="node-config-input-B15">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> B16 - PIN 4</label>
+                <input class="input-B" type="text" id="node-config-input-B16">
+            </div>
+            <div class="form-row">
+                <label class="label-B"><i class="fa fa-microchip"></i> AGND - PIN 2</label>
+                <input class="input-B" type="text" id="node-config-input-AGND2">
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="mux-mapping">
+    <p>working on it...</p>
+</script>
